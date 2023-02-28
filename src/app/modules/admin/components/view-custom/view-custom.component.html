@@ -1,0 +1,50 @@
+<div class="row">
+    <div class="col-md-2">
+        <app-admin-nav></app-admin-nav>
+    </div>
+    <div class="col">
+        <div class="text-center p-4">
+            <h1>CUSTOMER</h1>
+        </div>
+
+        <div class="container">
+            <div class="row">
+
+                <div class="">
+                    <table class="table">
+                        <thead>
+                            <th>PIC</th>
+                            <th>FIRSTNAME</th>
+                            <th>LASTNAME</th>
+                            <th>EMAIL</th>
+                            <th>ADDRESS</th>
+                            <th>PH nO</th>
+                            <th></th>
+
+                        </thead>
+                        <tbody>
+
+                            <tr class="table-active" *ngFor="let customer of customerlist">
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <img src="http://127.0.0.1:8000/{{customer.customer_pic}}" alt=""
+                                            style="height: 30px;width: 50px;">
+                                    </div>
+                                </td>
+                                <td>{{customer.first_name}} </td>
+                                <td>{{customer.last_name}}</td>
+                                <td>{{customer.email}}</td>
+                                <td>{{customer.address}}</td>
+                                <td>{{customer.phone}}</td>
+                                <td><button class="btn btn-danger">edit</button></td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

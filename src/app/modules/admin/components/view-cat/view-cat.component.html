@@ -1,0 +1,44 @@
+<div class="row">
+    <div class="col-md-2">
+        <app-admin-nav></app-admin-nav>
+    </div>
+    <div class="col">
+        <div class="text-center p-4">
+            <h1>CATEGORY LIST</h1>
+        </div>
+
+        <div class="container">
+            <div class="row">
+
+                <div class="">
+                    <table class="table">
+                        <thead>
+                            <th>product name</th>
+                            <th>discription</th>
+                            <th>image</th>
+                            <th></th>
+
+                        </thead>
+                        <tbody>
+
+                            <tr class="table-active" *ngFor="let category of categorylist">
+                                <td>{{category.category_name}}</td>
+                                <td>{{category.category_des}}</td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <img src="http://127.0.0.1:8000/{{category.category_image}}" alt=""
+                                            style="height: 30px;width: 50px;">
+                                    </div>
+                                </td>
+                                <td><button class="btn btn-danger">edit</button></td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

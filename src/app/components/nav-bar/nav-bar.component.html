@@ -1,0 +1,36 @@
+    <nav class="navbar navbar-expand-lg bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <!-- <button class="btn btn-outline-light me-2"></button> -->
+                <a class="btn btn-outline-light" aria-current="page" type="button" href="#" [routerLink]="'/main-home'">HOME</a>
+              </li>
+              <li class="nav-item">
+                <!-- <button class="btn btn-outline-primary me-2"></button> -->
+                <a class="btn btn-outline-primary" aria-current="page" type="button" href="#" [routerLink]="'/cart'">CART</a>
+              </li>
+              <li class="nav-item">
+                <!-- <button class="btn btn-outline-primary me-2"></button> -->
+                <a class="btn btn-outline-primary" aria-current="page" type="button" href="#" [routerLink]="'/product'">PRODUCT</a>
+              </li>
+              <li class="nav-item">
+                <!-- <button class="btn btn-outline-primary me-2"></button> -->
+                <a class="btn btn-outline-primary" aria-current="page" type="button" href="#" [routerLink]="'/myorder'">MY ORDER</a>
+              </li>
+            </ul>
+            <nav class="navbar bg-primary">
+                <form class="container-fluid justify-content-start">
+                  <a class="btn me-2" id="btn-1" type="button" [routerLink]="'/login'">login</a>
+                  <a class="btn btn-outline-primary me-2" type="button" [routerLink]="'/admin-log'">admin login</a>
+                </form>
+              </nav>
+          </div>
+        </div>
+      </nav>
+
+      

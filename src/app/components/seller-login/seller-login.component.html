@@ -1,0 +1,27 @@
+<!-- <div>
+  <app-nav-bar></app-nav-bar>
+</div> -->
+<div>
+    <header class="text-center "><h1>SELLER LOGIN</h1></header>
+</div>
+<div class="container p-4">
+  <!-- <a href="" style="padding-left: 90%;"><button class="btn-danger">HOME</button></a> -->
+<div class="cust p-4">
+    <form #form="ngForm" (ngSubmit)="submit(form.value)">
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">User name</label>
+        <input type="email" ngModel name="user_name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      </div><br>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="text" ngModel name="password" class="form-control" id="exampleInputPassword1">
+        </div><br>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button><br>
+        <span>sign up if you don't have an account</span><a href="">sign up</a>
+      </form>
+</div>
+</div>

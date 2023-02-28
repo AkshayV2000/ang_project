@@ -1,0 +1,63 @@
+<!-- <div>
+    <app-nav-bar></app-nav-bar>
+</div> -->
+<div class="sign">
+    <a href="" style="padding-left: 90%;"><button class="btn btn-primary"
+            style="background-color: darkblue; color: white">LOGIN</button></a>
+
+    <form class="row g-3 p-4" enctype="multipart/form-data" #form="ngForm" (ngSubmit)="submit(form.value)">
+        {{ message }}
+        <div class="text-center">
+            <header>
+                <h2>CUSTOMER SIGN UP</h2>
+            </header>
+        </div>
+        <div>
+            <div class="row">
+                <div class="col">
+                    <label for="" class="form-label text-light">First NAME</label>
+                    <input type="text" ngModel class="form-control" placeholder="First Name" aria-label=" name"
+                        name="first_name">
+                </div>
+                <div class="col">
+                    <label for="" class="form-label text-light">Last NAME</label>
+                    <input type="text" ngModel class="form-control" placeholder="Last Name" aria-label=" name"
+                        name="last_name">
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Email</label>
+                <input type="email" ngModel class="form-control" id="em_ail" name="email">
+            </div>
+            <div>
+                <label for="">Phone Number</label>
+                <input type="number" ngModel class="form-control" id="inputNumber4" name="phone">
+            </div>
+            <div>
+                <label for="inputAddress" class="form-label">Address</label>
+                <input type="text" ngModel class="form-control" id="inputAddress" placeholder="1234 Main St"
+                    name="address">
+            </div>
+            <div>
+                <label for="">Passwordr</label>
+                <input type="text" ngModel class="form-control" id="inputNumber4" name="password">
+            </div>
+            <div>
+                <label for="" class="col-form-label text-light">CUSTOMER PIC</label>
+                <input type="file" ngModel name="customer_pic" (change)="onImageChanged($event)" id=""
+                    class="form-control" aria-describedby="">
+            </div> <br><br>
+            <div class="row p-4">
+                <div class="col">
+                    <a href="" [routerLink]="'/customerlogin'">alredy have an account</a>
+                </div>
+                <div class="col">
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

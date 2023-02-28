@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-md-2">
+    <app-admin-nav></app-admin-nav>
+  </div>
+  <div class="col p-5 mt-3" id="div-main">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 p-4">
+          <h1 style="text-align: center;"><b><i>ENTER THE CATEGORY</i></b></h1>
+        </div>
+        <div class="col-md-8">
+          <form #categoryform="ngForm" (ngSubmit)="submit(categoryform.value)">
+            {{ message }}
+            <div class="row g-3 align-items-center">
+
+              <label for="" class="col-form-label text-light"></label>
+              <input type="file" ngModel name="category_image" (change)="onImageChanged($event)" id=""
+                class="form-control" aria-describedby="">
+
+            </div>
+            <div class="mb-3">
+              <label for="">CATEGORY NAME</label>
+              <input type="text" ngModel name="category_name" class="form-control" id="" aria-describedby="">
+            </div>
+            <div class="mb-3">
+              <label for="">DISCRIPTION</label>
+              <input type="text" ngModel name="category_des" class="form-control" id="" aria-describedby="">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

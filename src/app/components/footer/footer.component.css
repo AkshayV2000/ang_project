@@ -1,0 +1,15 @@
+footer{
+    background-color: black;
+    height: 220px;
+}
+I{
+    font-weight: 500;
+    font-size: medium;
+    color: bisque;
+}
+p{
+    color: beige;
+    font-size: smaller;
+    font-weight: 200;
+    font-family: 'Times New Roman', Times, serif;
+}

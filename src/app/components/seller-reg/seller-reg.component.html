@@ -1,0 +1,90 @@
+<!-- <div>
+  <app-nav-bar></app-nav-bar>
+</div> -->
+<div class="text-center p-4">
+    <h1>SELLER REGESTRATION </h1>
+  </div>
+
+  <div class="container bg-success">
+    <br>
+    <div class="col-md-6 p-4">
+      <form #sellerform="ngForm" (ngSubmit)="submit(sellerform.value)" >
+        {{ message }}
+        <div class="mb-3">
+          <label for="" class="form-label text-light">First NAME</label>
+          <input type="text" ngModel name="s_name" class="form-control" id="" name="first_name">
+          <label for="" class="form-label text-light">Last NAME</label>
+          <input type="text" ngModel name="s_name" class="form-control" id="" name="last_name">
+        </div>
+
+        <div class="mb-3">
+          <label for="" class="form-label text-light">ADDRESS </label> <br>
+          <textarea name="address" ngModel id="" cols="30" rows="5" style="width: 400px; border-radius: 10px;"></textarea>
+        </div>
+
+        <div class="row g-3 align-items-center mb-3">
+          <div class="col-auto">
+            <label for="" class="form-label text-light">PHONE NUMBER</label>
+          </div>
+          <div class="col-auto">
+            <input type="number" ngModel name="phone" class="form-control" id="">
+          </div>
+
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label text-light">EMAIL</label>
+          <input type="email" ngModel name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text"></div>
+        </div>
+
+        <div class="mb-3">
+          <label for="" class="form-label text-light">BANK NAME</label>
+          <input type="text" ngModel name="bank_name" class="form-control" id="" aria-describedby="">
+          <div id="" class="form-text"></div>
+        </div>
+        <div class="row g-3 align-items-center mb-3">
+          <div class="col-auto">
+            <label for="" class="form-label text-light">IFSC CODE</label>
+          </div>
+          <div class="col-auto">
+            <input type="text" ngModel name="ifsc" class="form-control" id="" aria-describedby="">
+          </div>
+          <div id="" class="form-text"></div>
+        </div>
+
+        <div class="row g-3 align-items-center mb-3">
+          <div class="col-auto">
+            <label for="" class="form-label text-light">BRANCH &nbsp;&nbsp;</label>
+          </div>
+          <div class="col-auto">
+            <input type="text" ngModel name="branch" class="form-control" id="" aria-describedby="">
+          </div>
+
+          <div id="" class="form-text"></div>
+        </div>
+
+        <div class="mb-3">
+          <label for="" class="form-label text-light">BANK ACCOUNT NUMBER</label>
+          <input type="number" ngModel name="account_no" class="form-control" id="">
+        </div>
+        <div class="row g-3 align-items-center">
+
+          <label for="" class="col-form-label text-light">PIC UPLODE</label>
+          <input type="file" ngModel name="seller_pic" (change)="onImageChanged($event)" id="" class="form-control" aria-describedby="">
+
+        </div> <br>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label text-light" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary" style="
+                color: white;
+                height: 40px;
+                width: 250px;
+                border: none;
+                border-radius: 50px;
+                box-shadow: 5px 5px 5px rgb(189, 189, 189);">Submit</button>
+      </form>
+    </div>
+  </div>

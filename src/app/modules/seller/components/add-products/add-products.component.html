@@ -1,0 +1,48 @@
+<div class="row">
+  <div class="col-md-2">
+    <app-sel-nav></app-sel-nav>
+  </div>
+  <div class="col">
+    <div>
+      <h1 class="text-center">ADD PRODUCTS</h1>
+    </div>
+    <div style="background-color: rgb(113, 223, 172); height: 550px;">
+      <div class="div1 mt-5 ms-5">
+        <form #productform="ngForm" (ngSubmit)="submit(productform.value)" >
+          <div class="mb-3">
+            <label for="" class="form-label">PRODUCT NAME </label>
+            <input type="text" ngModel name="product_name" class="form-control" id="" aria-describedby="">
+          </div>
+          <div class="mb-3">
+            <!-- <label for="" class="form-label">Category</label> -->
+            <select ngModel name="category" id=""><br><br>
+              <option selected>choos an option</option>
+              <option *ngFor="let category of categorylist" value="{{category.id}}">{{category.category_name}} </option>
+            </select>
+          </div>  
+          <div class="mb-3">            
+            <label for="" class="form-label">PRODUCT PRICE</label>
+            <input type="number" ngModel name="price" class="" id="">
+          </div>
+          <div class="mb-3">
+            <label class="form-check-label" for="exampleCheck1">PRODUCT NUMBER</label>
+            <input type="number" ngModel name="product_no" class="form-control" id="">
+          </div>
+          <div class="mb-3">
+            <label class="form-check-label" for="exampleCheck1">PRODUCT DISCRIPTION</label>
+            <input type="textarea" ngModel name="product_des" class="form-control" id="">
+          </div>
+          <div class="mb-3">
+            <label class="form-check-label" for="exampleCheck1">CURRENT STOCK</label>
+            <input type="number" ngModel name="stock" class="" id="">
+          </div>
+          <div>
+            <label for="" class="col-form-label text-light">FILE UPLODE</label>
+            <input type="file" ngModel name="product_image" (change)="onImageChanged($event)" id="" class="form-control" aria-describedby="">
+          </div> <br>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

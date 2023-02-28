@@ -1,0 +1,62 @@
+<div class="row">
+    <div class="col-md-2">
+        <app-admin-nav></app-admin-nav>
+    </div>
+    <div class="col">
+        <div class="text-center p-4">
+            <h1>CUSTOMER</h1>
+        </div>
+
+        <div class="container">
+            <div class="row">
+
+                <div class="">
+                    <table class="table">
+                        <thead>
+                            <th>PIC</th>
+                            <th>FIRSTNAME</th>
+                            <th>LASTNAME</th>
+                            <th>EMAIL</th>
+                            <th>USSER NAME</th>
+                            <th>PASSWORD</th>
+                            <th>BANK NAME</th>
+                            <th>IFSC</th>
+                            <th>BANK ACCOUNT NO</th>
+                            <th>BRANCH</th>
+                            <th>ADDRESS</th>
+                            <th>PH nO</th>
+                            <th></th>
+
+                        </thead>
+                        <tbody>
+
+                            <tr class="table-active" *ngFor="let seller of sellerlist">
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <img src="http://127.0.0.1:8000/{{seller.seller_pic}}" alt=""
+                                            style="height: 30px;width: 50px;">
+                                    </div>
+                                </td>
+                                <td>{{seller.first_name}} </td>
+                                <td>{{seller.last_name}}</td>
+                                <td>{{seller.email}}</td>
+                                <td></td>
+                                <td></td>
+                                <td>{{seller.bank_name}}</td>
+                                <td>{{seller.ifsc}}</td>
+                                <td>{{seller.account_no}}</td>
+                                <td>{{seller.branch}}</td>
+                                <td>{{seller.address}}</td>
+                                <td>{{seller.phone}}</td>
+                                <td><button class="btn btn-danger">edit</button></td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

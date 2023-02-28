@@ -1,0 +1,8 @@
+nav{
+    border: 3px solid darkblue;
+}
+#btn-1{
+    /* border: 2px solid white; */
+    background-color: darkblue;
+    color: white;
+}
