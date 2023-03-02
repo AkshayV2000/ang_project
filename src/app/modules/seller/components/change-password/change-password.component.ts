@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonserviceService } from 'src/app/services/commonservice.service';
+import { SellerservicesService } from 'src/app/services/sellerservices.service';
 
 @Component({
   selector: 'app-change-password',
@@ -10,7 +11,7 @@ export class ChangePasswordComponent {
   message:any;
   msg:any;
 
-  constructor(private service:CommonserviceService){}
+  constructor(private service:SellerservicesService){}
 
   submit(formData:any){
     console.log(formData)

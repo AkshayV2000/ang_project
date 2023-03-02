@@ -3,7 +3,43 @@
         <app-sel-nav></app-sel-nav>
     </div>
     <div class="col">
-        <p>viwe-products works!</p>
+        <div class="text-center p-4">
+            <h1>CATEGORY LIST</h1>
+        </div>
+
+        <div class="container">
+            <div class="row">
+
+                <div class="">
+                    <table class="table">
+                        <thead>
+                            <th>product name</th>
+                            <th>discription</th>
+                            <th>image</th>
+                            <th></th>
+
+                        </thead>
+                        <tbody>
+
+                            <tr class="table-active" *ngFor="let product of productlist">
+                                <td>{{product.product_name}}</td>
+                                <td>{{product.product_des}}</td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <img src="http://127.0.0.1:8000/{{product.product_image}}" alt=""
+                                            style="height: 30px;width: 50px;">
+                                    </div>
+                                </td>
+                                <td><button class="btn btn-danger">edit</button></td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
     </div>
 </div>
 

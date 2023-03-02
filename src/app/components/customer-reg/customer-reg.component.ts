@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CommonserviceService } from 'src/app/services/commonservice.service';
 import { CustomerserviceService } from 'src/app/services/customerservice.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { CustomerserviceService } from 'src/app/services/customerservice.service
 })
 export class CustomerRegComponent {
   customer_pic: any;
-  constructor(private service: CustomerserviceService){}
+  constructor(private service: CommonserviceService){}
   message: string = ""
   onImageChanged(event :any){
     this.customer_pic = event.target.files[0]

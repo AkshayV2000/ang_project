@@ -14,6 +14,7 @@ import { ViweProductsComponent } from './components/viwe-products/viwe-products.
 import { FormsModule } from '@angular/forms';
 
 
+
 @NgModule({
   declarations: [
     SellerComponent,
@@ -24,7 +25,8 @@ import { FormsModule } from '@angular/forms';
     ViewOrderComponent,
     ChangePasswordComponent,
     UpdateStockComponent,
-    ViweProductsComponent
+    ViweProductsComponent,
+    
   ],
   imports: [
     CommonModule,

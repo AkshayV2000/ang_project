@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { CommonserviceService } from 'src/app/services/commonservice.service';
 import { CustomerserviceService } from 'src/app/services/customerservice.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { CustomerserviceService } from 'src/app/services/customerservice.service
 })
 export class CatogaryComponent {
   category: any;
-  constructor(private service : CustomerserviceService, private router: Router){}
+  constructor(private service : CommonserviceService, private router: Router){}
 
 ngOnInit(){
   this.service.homeCategory().subscribe((res:{category:any})=>{

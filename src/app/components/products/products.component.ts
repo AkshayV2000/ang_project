@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CommonserviceService } from 'src/app/services/commonservice.service';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
@@ -8,14 +9,17 @@ import { ProductService } from 'src/app/services/product.service';
 })
 export class ProductsComponent {
   
-  productlist :any
 
-  constructor(private service: ProductService){}
-  
+
+  constructor(private service: CommonserviceService){}
+
+  productlist: any
+
   ngOnInit(){
-    this.service.getProducts().subscribe(res=>{
-      // console.log(res)
-      this.productlist = res
+    this.service.getProduct().subscribe((res: {products: any})=>{
+      
+      this.productlist = res.products
+      console.log(this.productlist)
     })
   }
   

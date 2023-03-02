@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, LOCALE_ID } from '@angular/core';
 import { AdminserviceService } from 'src/app/services/adminservice.service';
 import { CommonserviceService } from 'src/app/services/commonservice.service';
+import { SellerservicesService } from 'src/app/services/sellerservices.service';
 
 @Component({
   selector: 'app-add-products',
@@ -8,36 +9,39 @@ import { CommonserviceService } from 'src/app/services/commonservice.service';
   styleUrls: ['./add-products.component.css']
 })
 export class AddProductsComponent {
-  constructor(private service: CommonserviceService, private adminservice: AdminserviceService){}
+  constructor(private service: SellerservicesService, private adminservice: AdminserviceService) { }
   token: any
   categorylist: any
-  ngOnInit(){
+  ngOnInit() {
     this.token = localStorage.getItem('s_token')
-    this.adminservice.getCategory().subscribe((res:{category : any})=>{
-      this.categorylist = res
+    this.adminservice.getCategory().subscribe((res: { category: any }) => {
+      this.categorylist = res.category
+      // console.log(res)
     })
   }
 
 
-  product_image : any;
-  onImageChanged(event :any){
+  product_image: any;
+  onImageChanged(event: any) {
     this.product_image = event.target.files[0]
   }
 
-  submit(formdata : any){
-    console.log(formdata)
+  submit(dataform: any) {
+    console.log(dataform)
+
     const productData = new FormData()
-    productData.append('product_name',formdata['product_name'])
-    productData.append('product_no',formdata['product_no'])
-    productData.append('product_des',formdata['product_des'])
-    productData.append('price',formdata['price'])
-    productData.append('stock',formdata['stock'])
-    productData.append('product_image',this.product_image)
-    productData.append('seller',this.token)
-    console.log(productData)
+    productData.append('product_name', dataform['product_name'])
+    productData.append('category',dataform['category'])
+    productData.append('product_no', dataform['product_no'])
+    productData.append('product_des', dataform['product_des'])
+    productData.append('price', dataform['price'])
+    productData.append('stock', dataform['stock'])
+    productData.append('product_image', this.product_image)
+    productData.append('seller', this.token)
+    console.log(this.token)
 
 
-    this.service.addProduct(productData).subscribe((res:{statusCode: string})=>{
+    this.service.addProduct(productData).subscribe((res: { statusCode: string }) => {
       console.log(res)
     })
   }

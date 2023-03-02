@@ -3,6 +3,69 @@
         <app-sel-nav></app-sel-nav>
     </div>
     <div class="col">
-        <p>update-stock works!</p>
+        <div>
+            <h1 class="text-center"></h1>
+        </div>
+        <table>
+            <thead>
+                <tr class="">
+                    <td></td>
+                    <td>Product ID</td>
+                    <td>Product Name</td>
+                    <td>Discription</td>
+                    <td>Current Stocks</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngForm="let product of productlist">
+                    <form #updateForm="ngForm" (ngSubmit)="submit(updateForm.value)">
+                        <td><img src="" alt=""></td>
+                        <td>{{product.product_no}}</td>
+                        <td>{{product.product_name}}</td>
+                        <td>{{product.product_des}}</td>
+                        <td>{{product.stock}}</td>
+                        <td><input type="text"></td>
+                        <td><button type="submit" class="btn btn-danger">
+                            update
+                        </button></td>
+                    </form>
+                </tr>
+            </tbody>
+        </table>
+        <!-- <div style="background-color: rgb(9, 159, 240); height: 550px;">
+            <div class="div1 mt-5 ms-5 p-4">
+                <form method="POST">
+
+                    <input type="hidden" id="p_id" name="pro_id"><br><br>
+                    <div class="mb-3">
+                        <label class="form-check-label" for="exampleCheck1">PRODUCT NUMBER</label>
+                        <select name="product_no" id="p_no" aria-placeholder="product number">
+                            <option disabled selected>select product</option>
+
+                            <option value=""></option>
+
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">PRODUCT NAME </label>
+                        <input type="text" name="p_name" class="form-control" readonly id="pr_name" aria-describedby="">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-check-label" for="exampleCheck1">CURRENT STOCK </label>
+                        <input type="text" name="p_stock" class="form-control" readonly id="c_stock"
+                            aria-describedby="">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-check-label" for="exampleCheck1">NEW STOCK</label>
+                        <input type="number" name="new_stock" class="" id="n_stock">
+                    </div>
+                    <button type="submit" class="btn btn-primary">UPDATE</button><br>
+                
+                </form>
+            </div> -->
+
+        <!-- </div> -->
     </div>
 </div>

@@ -3,14 +3,14 @@
 </div> -->
 <div class="container">
     <div class="row">
-        <div class="col-md-4" *ngFor="let product of productlist">
+        <div class="col-md-4" *ngFor="let products of productlist">
             <div class="card" style="width: 18rem;" >
-                <img src="{{product.image}}" class="card-img-top" alt="..." style="height: 200px;">
+                <img src="{{products.image}}" class="card-img-top" alt="..." style="height: 200px;">
                 <div class="card-body">
-                  <h3 class="card-title">:{{product.product_name}}</h3>
-                  <p class="card-text">seller:{{product.seller}}</p>
-                  <h4 class="card-text">price:{{product.price}}</h4>
-                  <h5 class="card-text" >stock:{{product.stock}}</h5>
+                  <h3 class="card-title">:{{products.product_name}}</h3>
+                  <p class="card-text">seller:{{products.seller}}</p>
+                  <h4 class="card-text">price:{{products.price}}</h4>
+                  <h5 class="card-text" >stock:{{products.stock}}</h5>
                   <a [routerLink]="'/product-details'">product </a>
                 </div>
               </div>

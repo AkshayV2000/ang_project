@@ -6,9 +6,9 @@
     <div>
       <h1 class="text-center">ADD PRODUCTS</h1>
     </div>
-    <div style="background-color: rgb(113, 223, 172); height: 550px;">
+    <div style="background-color: rgb(9, 159, 240); height: 550px;">
       <div class="div1 mt-5 ms-5">
-        <form #productform="ngForm" (ngSubmit)="submit(productform.value)" >
+        <form #dataForm="ngForm" (ngSubmit)="submit(dataForm.value)" >
           <div class="mb-3">
             <label for="" class="form-label">PRODUCT NAME </label>
             <input type="text" ngModel name="product_name" class="form-control" id="" aria-describedby="">
@@ -16,7 +16,7 @@
           <div class="mb-3">
             <!-- <label for="" class="form-label">Category</label> -->
             <select ngModel name="category" id=""><br><br>
-              <option selected>choos an option</option>
+              <option selected disabled>choos an option</option>
               <option *ngFor="let category of categorylist" value="{{category.id}}">{{category.category_name}} </option>
             </select>
           </div>  

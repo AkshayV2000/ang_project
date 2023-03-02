@@ -20,15 +20,22 @@ export class CommonserviceService {
 
     return this.http.post(this.baseUrl + 'seller_login', FormData)
   }
-  change_Password(formData:any, id:number):Observable<any>{
+  addcustomer(FormData: any) :Observable<any>{
 
-    return this.http.put(this.sellerUrl + 'change_password/'+id,formData)
+    return this.http.post(this.baseUrl + 'customer_reg', FormData)
   }
-  addProduct(products: any) :Observable<any>{
+  customerLogin(FormData: any) :Observable<any>{
 
-    return this.http.post(this.sellerUrl +'addproduct', products)
-
+    return this.http.post(this.baseUrl + 'customer_login', FormData)
   }
+  homeCategory() :Observable<any>{
+
+    return this.http.get(this.baseUrl + 'home_category')
+  }
+  getProduct() :Observable<any>{
+    return this.http.get(this.baseUrl + 'view_products')
+  }
+  
  
 
 }

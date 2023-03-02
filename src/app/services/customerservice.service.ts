@@ -12,16 +12,5 @@ export class CustomerserviceService {
 
   constructor(private http: HttpClient) { }
   
-  addcustomer(FormData: any) :Observable<any>{
-
-    return this.http.post(this.baseUrl + 'customer_reg', FormData)
-  }
-  customerLogin(FormData: any) :Observable<any>{
-
-    return this.http.post(this.baseUrl + 'customer_login', FormData)
-  }
-  homeCategory() :Observable<any>{
-
-    return this.http.get(this.baseUrl + 'home_category')
-  }
+  
 }
