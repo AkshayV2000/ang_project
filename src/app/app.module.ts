@@ -25,6 +25,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { CustmerHomeComponent } from './components/custmer-home/custmer-home.component';
 import { TestingComponent } from './components/testing/testing.component';
 import { ZipcodeComponent } from './components/zipcode/zipcode.component';
+import { CustomerComponent } from './modules/customer/customer.component';
 
 
 
@@ -53,6 +54,7 @@ import { ZipcodeComponent } from './components/zipcode/zipcode.component';
     CustmerHomeComponent,
     TestingComponent,
     ZipcodeComponent,
+    CustomerComponent,
     
     
     
